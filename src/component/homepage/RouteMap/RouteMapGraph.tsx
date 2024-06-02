@@ -1,17 +1,11 @@
 import styled from "styled-components";
 import { Box } from "@mui/material";
-import { Station } from "./RouteMapStation";
-
-const Line = styled(Box)`
-  width: 4px;
-  height: 40px;
-  background-color: #412323;
-`;
+import { Station, StationDeparture, StationTerminal } from "./RouteMapStation";
 
 const RouteContainer = styled(Box)`
   display: flex;
     flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   background-color: #fcf4f4;
   border: 3px solid lightcoral;
   padding: 20px;
@@ -19,10 +13,13 @@ const RouteContainer = styled(Box)`
 
 export const RouteMapGraph = () => (
   <RouteContainer>
-    <Station stationName="ShinYahata" stationDetail="Lorem方面　お乗り換え"/>
-    <Line />
+    <StationDeparture stationName="ShinYahata" stationDetail="JR線・八幡市営地下鉄線　お乗り換え"/>
     <Station stationName="YahataChuoKoko" stationDetail=""/>
-    <Line />
     <Station stationName="Ohgakubo" stationDetail=""/>
+    <Station stationName="YahataColorfulPark" stationDetail="カラフルパーク行き連絡バスは1番乗り場から"/>
+    <Station stationName="Ginshin" stationDetail="八幡市営地下鉄南北線　お乗り換え"/>
+    <Station stationName="TsuyamaStadium" stationDetail=""/>
+    <Station stationName="Tsuyama" stationDetail=""/>
+    <StationTerminal stationName="Airport" stationDetail=""/>
   </RouteContainer>
 );

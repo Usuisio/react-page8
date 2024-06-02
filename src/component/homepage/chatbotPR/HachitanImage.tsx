@@ -5,5 +5,5 @@ const HachitanImageStyle = styled.img`
   height: auto;
 `;
 export const HachitanImage = () => (
-  <HachitanImageStyle src="/images/chatbot.png" alt="Illustration" />
+  <HachitanImageStyle src="/images/Hachitan_trim.png" alt="Illustration" />
 );

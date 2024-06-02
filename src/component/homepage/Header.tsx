@@ -7,7 +7,7 @@ const HeaderStyle = styled.div`
     align-items: center;
 
   background-color: white;
-  color: var(--primary-color);
+  color: ${({theme})=>theme.colors.primary};
   padding: 10px;
   text-align: center;
   width: 100%;

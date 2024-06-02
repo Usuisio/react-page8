@@ -8,13 +8,14 @@ const TopicsItemStyle = styled.div`
   justify-content: center;
   align-items: center;
   padding: 20px;
+  min-width: 160px;
 `;
 
 const TopicNameStyle = styled.h1`
-    color: var(--primary-color);
+    color: ${({theme})=>theme.colors.primary};
     `;
 const TopicDetailStyle = styled.p`
-    color: var(--secondary-color);
+    color: ${({theme})=>theme.colors.secondary};
     `;
 
 interface TopicsItemProps {

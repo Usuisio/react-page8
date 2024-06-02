@@ -13,8 +13,8 @@ const StationIconStyle = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 80px;
-  min-height: 80px;
+  min-width: 60px;
+  min-height: 60px;
   background-color: White;
   border-radius: 50%;
   color: #A12323;
@@ -23,8 +23,8 @@ const StationIconStyle = styled.div`
 `;
 
 const iconStyles = css`
-    min-width: 50px;
-    min-height: 50px;
+    min-width: 40px;
+    min-height: 40px;
 `;
 
 const StyledBusinessIcon = styled(BusinessIcon)`${iconStyles}`;
