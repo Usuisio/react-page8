@@ -23,9 +23,9 @@ export const StationDetail = ({
     <StationDetailStyle>
       <span>
         {
-          stationDetail
-            ? "　"
-            : "" /*h1の高さをアイコンと合わせるための苦肉の策 詳細説明に何かが入っていれば全角スペースを入れることで三行分の扱いにしている*/
+          // stationDetail
+          //   ? "　"
+          //   : "" /*h1の高さをアイコンと合わせるための苦肉の策 詳細説明に何かが入っていれば全角スペースを入れることで三行分の扱いにしている*/
         }
       </span>
       <h3>{t(stationName)}</h3>

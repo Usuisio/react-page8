@@ -12,11 +12,8 @@ export const LanguageSwitcher = () => {
 
   return (
     <>
-    {/* <select onChange={handleLanguageChange}>
-      <option value="ja">日本語</option>
-      <option value="en">English</option>
-    </select> */}
-    <FormControl >
+
+    <FormControl fullWidth>
     <InputLabel>Language</InputLabel>
     <Select
       label="Language"

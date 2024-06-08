@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { SNSIcons } from "./SNSIcons/SNSIcons";
 
 const FooterStyle = styled.div`
     background-color: ${({theme})=>theme.colors.primary};;

@@ -21,12 +21,10 @@ const TopicDetailStyle = styled.p`
 interface TopicsItemProps {
     children?: ReactNode;
     topicName: string;
-    topicDetail: string;
     }
-export const TopicsItem = ({children, topicName, topicDetail}:TopicsItemProps) => (
+export const TopicsItem = ({children, topicName}:TopicsItemProps) => (
   <TopicsItemStyle>
     <TopicCircle>{children}</TopicCircle>
     <TopicNameStyle>{topicName}</TopicNameStyle>
-    <TopicDetailStyle>{topicDetail}</TopicDetailStyle>
   </TopicsItemStyle>
 );

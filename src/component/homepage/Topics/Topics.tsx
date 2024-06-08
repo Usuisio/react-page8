@@ -40,13 +40,12 @@ const StyledChatbotIcon = styled(ChatbotIcon)`
 type topic = {
   icon: ReactNode;
   title: string;
-  content: string;
 };
 const topicList = [
-  { icon: <StyledMapIcon />, title: "RouteMap", content: "内容1" },
-  { icon: <StyledScheduleIcon />, title: "Timetable", content: "内容2" },
-  { icon: <StyledTrainIcon />, title: "ServiceStatus", content: "内容3" },
-  { icon: <StyledChatbotIcon />, title: "Chatbot", content: "内容4" },
+  { icon: <StyledMapIcon />, title: "RouteMap"},
+  { icon: <StyledScheduleIcon />, title: "Timetable"},
+  { icon: <StyledTrainIcon />, title: "ServiceStatus" },
+  { icon: <StyledChatbotIcon />, title: "Chatbot"},
 ];
 
 export const Topics = () => {
@@ -57,7 +56,6 @@ export const Topics = () => {
         <TopicsItem
           key={topic.title}
           topicName={t(topic.title)}
-          topicDetail={topic.content}
         >
           {topic.icon}
         </TopicsItem>

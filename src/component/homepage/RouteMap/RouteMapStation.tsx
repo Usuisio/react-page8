@@ -24,14 +24,14 @@ const IconContainer = styled.div`
 `;
 const Line = styled.div`
   width: 4px;
-  height: 28px;
+  height: 20px;
   
   background-color: #412323;
 `;
 
 const DummyLine = styled.div`
   width: 4px;
-  height: 28px;
+  height: 20px;
 `;
 
 interface StationIconProps {

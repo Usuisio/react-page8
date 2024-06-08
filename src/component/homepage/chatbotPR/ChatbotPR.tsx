@@ -6,8 +6,11 @@ import "../../../App.css";
 const stationPath = "./images/station.png";
 
 const ChatbotPRStyle = styled.div`
+  position: "relative";
+
+  flex: 1;
+  border: 5px solid white;
   background-image: url(${stationPath});
-  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
@@ -16,9 +19,9 @@ const ChatbotPRStyle = styled.div`
   width: 100%;
   height: 500px;
 
-  @media (max-width: ${({theme})=>theme.breakpoints.mobile}) {
-  height: 100%;
-}
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    height: 100%;
+  }
 `;
 
 const ChatbotPROverlayStyle = styled.div`
@@ -34,19 +37,19 @@ const ChatbotPROverlayStyle = styled.div`
   align-items: center;
   overflow: hidden;
 
-  @media (max-width: ${({theme})=>theme.breakpoints.mobile}) {
-  flex-direction: column;
-}
-
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    flex-direction: column;
+  }
 `;
+
 
 export const ChatbotPR = () => {
   return (
-    <ChatbotPRStyle>
-      <ChatbotPROverlayStyle>
-        <ChatbotPRMessage />
-        <HachitanCircle />
-      </ChatbotPROverlayStyle>
-    </ChatbotPRStyle>
+      <ChatbotPRStyle>
+        <ChatbotPROverlayStyle>
+          <ChatbotPRMessage />
+          <HachitanCircle />
+        </ChatbotPROverlayStyle>
+      </ChatbotPRStyle>
   );
 };

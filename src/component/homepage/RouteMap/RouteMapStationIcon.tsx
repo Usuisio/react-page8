@@ -15,9 +15,9 @@ const StationIconStyle = styled.div`
   align-items: center;
   min-width: 60px;
   min-height: 60px;
-  background-color: White;
+  background-color: var(--primary-color);
   border-radius: 50%;
-  color: #A12323;
+  color: white;
   font-weight: bold;
 
 `;
@@ -39,8 +39,8 @@ const StyledCastleIcon = styled(CastleIcon)`${iconStyles}`;
 
 
 const IconMap = {
-    "ShinYahata": StyledBusinessIcon,
-    "YahataChuoKoko": StyledSchoolIcon,
+    "NishiYahata": StyledBusinessIcon,
+    "YahatadaiKoko": StyledSchoolIcon,
     "Ohgakubo": StyledForestIcon,
     "YahataColorfulPark": StyledAttractionsIcon,
     "Ginshin": StyledCastleIcon,
@@ -50,8 +50,8 @@ const IconMap = {
 };
 
 export type stations =
-  "ShinYahata"
-  | "YahataChuoKoko"
+  "NishiYahata"
+  | "YahatadaiKoko"
   | "Ohgakubo"
   | "YahataColorfulPark"
   | "Ginshin"

@@ -1,5 +1,4 @@
-
-import { useTranslation } from "react-i18next";
+import { useTranslation, Trans } from 'react-i18next';
 import styled from "styled-components";
 
 const ChatbotPRMessageStyle = styled.div`
@@ -33,7 +32,11 @@ export const ChatbotPRMessage = () => {
   return (
     <ChatbotPRMessageStyle>
       <h1>{t("ChatbotPRTitle")}</h1>
-      <p>{t("ChatbotPRDetail")} </p>
+      <br/>
+      <Trans i18nKey="ChatbotPRDetail">
+        Welcome to our application.<br/>We hope you have a great experience!
+      </Trans>
+      <br/>
       <br/>
       <CustomButton>{t("TryChatbot")}</CustomButton>
     </ChatbotPRMessageStyle>

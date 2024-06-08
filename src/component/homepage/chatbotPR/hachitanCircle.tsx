@@ -17,13 +17,16 @@ const CircleStyle = styled.div`
   
   @media (max-width: ${({theme})=>theme.breakpoints.mobile}) {
   max-width: 400px;
-  max-height: 400px;
+  aspect-ratio: 1 / 1;
   border: 20px solid ${({theme})=>theme.colors.primary};
 }
 `;
 
-export const HachitanCircle = () => (
+export const HachitanCircle = () => {
+  return (
+  <>
   <CircleStyle>
-    <HachitanImage />
+    <HachitanImage/>
   </CircleStyle>
-);
+  </>
+)};
