@@ -1,4 +1,5 @@
-import { Homepage } from "./component/homepage/Homepage"
+import { TrickSwitcher } from "./DebugTool";
+import { GameLoop } from "./component/GameLoop";
 import { LanguageSwitcher } from "./languageSwitcher";
 
 
@@ -7,7 +8,8 @@ function App() {
   return (
     <>
     <LanguageSwitcher></LanguageSwitcher>
-      <Homepage></Homepage>
+    <TrickSwitcher></TrickSwitcher>
+    <GameLoop></GameLoop>
     </>
   )
 }

@@ -1,6 +1,6 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import { NewsFeed } from "./component/homepage/NewsFeed/NewsFeed";
+import { StartCard } from "./component/GameSystem/StartCard";
 
 const getBrowserLanguage = () => {
   return navigator.language || "ja";
@@ -12,6 +12,25 @@ i18n.use(initReactI18next).init({
   resources: {
     en: {
       translation: {
+        StartCardMessage:
+          "This is the homepage of a certain railway company. <br/> However, due to the mischief of the chat AI 'Hachitan', <br/> various contents have been changed to strange things! <br/> Please help us investigate to restore it to normal.",
+        StartCardMessage2:
+          "If you find any mischief, go back up and 'report' it.",
+        StartCardMessage3: "If there's nothing wrong, continue downwards.",
+        StartCardMessage4:
+          "There are 8 pages in total to investigate. Thank you.",
+        StartCardMessage5: "From the administrator",
+
+        EndCardMessage1: "Thanks to you,",
+        EndCardMessage2_1: "We have caught the mischievous AI, Hachitan.",
+        EndCardMessage2_2: "All the mischief on the homepage has been fixed.",
+        EndCardMessage3:
+          "If anything happens again, we would like your cooperation.",
+        EndCardMessage4: "From the administrator",
+
+        HachitanSnickering1: "Too bad! There's nothing here! Try again!",
+        HachitanSnickering2: "Oh, you didn't notice? Try again!",        
+
         ChatbotPRTitle: 'Introducing the Chat AI "Hachitan"!',
         ChatbotPRDetail:
           "The Yawata Railway website now features an AI chatbot!<br/>Feel free to ask anything, from departure times to transfer information!",
@@ -62,8 +81,9 @@ i18n.use(initReactI18next).init({
         routeMap: "Route Map",
         nishiyahataTimetable: "Nishi-Yahata Station Timetable",
 
-        TransferToJRLine  : "Transfer to JR Line",
-        ConnectionBusesDepartFromPlatform1: "Connection buses depart from platform 1",
+        TransferToJRLine: "Transfer to JR Line",
+        ConnectionBusesDepartFromPlatform1:
+          "Connection buses depart from platform 1",
         TransferToSubwayLine: "Transfer to Subway Line",
         ExpressStopsOnGameDays: "Express stops on game days",
 
@@ -73,13 +93,32 @@ i18n.use(initReactI18next).init({
         Holidays: "Holidays",
 
         DontPush: "Don't Push!",
+
+        Report: "Report!",
+        FinishReport: "Report Complete!",
       },
     },
     ja: {
       translation: {
+        StartCardMessage:
+          "ここは、ある鉄道会社のホームページ。<br/>しかし、チャットAI「ハチタン」のイタズラで、<br/>あちこちがヘンテコな内容に書き換えられてしまいました！<br/>元に戻すために、調査を手伝ってください。",
+        StartCardMessage2: "イタズラを見つけたら、上に戻って「報告」しよう。",
+        StartCardMessage3: "何もなかったら、そのまま下に進もう。",
+        StartCardMessage4: "調査対象は全部で8ページ。よろしくね。",
+        StartCardMessage5: "管理者より",
+
+        EndCardMessage1: "ありがとう！あなたのおかげで",
+        EndCardMessage2_1: "イタズラAIのハチタンを捕まえられたよ。",
+        EndCardMessage2_2: "ホームページのイタズラは全部直せたよ。",
+        EndCardMessage3: "また何かあれば、協力してほしい。",
+        EndCardMessage4: "管理者より",
+
+        HachitanSnickering1: "残念！そこには何にも仕掛けてないよ～だ！ 最初からやり直し！",
+        HachitanSnickering2: "あれれ、気づかなかったの？ 最初からやり直し！",
+
         ChatbotPRTitle: "チャットAI「ハチタン」デビュー！",
         ChatbotPRDetail:
-          "八幡鉄道ホームページにAIチャットボットが登場！<br/>発車時刻や乗り換え案内など、どんなことでも質問してね！",
+          "八幡鉄道ホームページにAIチャットボットが登場！<br/>発車時刻や乗り換え案内など、なんでも聞いてね！",
         ChatbotPRDetail1: "八幡鉄道ホームページにAIチャットボットが登場！",
         ChatbotPRDetail2: "発車時刻や乗り換え案内など、なんでも聞いてね！",
         TryChatbot: "使ってみる",
@@ -125,7 +164,7 @@ i18n.use(initReactI18next).init({
         routeMap: "駅の紹介",
         nishiyahataTimetable: "西八幡駅 時刻表",
 
-        TransferToJRLine  : "JR線　お乗り換え",
+        TransferToJRLine: "JR線　お乗り換え",
         ConnectionBusesDepartFromPlatform1: "連絡バスは1番乗り場",
         TransferToSubwayLine: "市営地下鉄線　お乗り換え",
         ExpressStopsOnGameDays: "試合開催日は快速停車",
@@ -135,6 +174,9 @@ i18n.use(initReactI18next).init({
         Weekdays: "平日",
         Holidays: "土・休日",
         DontPush: "押すな！",
+
+        Report: "報告する！",
+        FinishReport: "報告完了！",
       },
     },
   },

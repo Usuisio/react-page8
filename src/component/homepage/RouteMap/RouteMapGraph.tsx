@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Box } from "@mui/material";
 import { Station, StationDeparture, StationTerminal } from "./RouteMapStation";
 import {Paper} from "@mui/material";
 import { useTranslation } from "react-i18next";

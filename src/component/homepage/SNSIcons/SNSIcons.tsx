@@ -3,6 +3,8 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import styled, { css } from "styled-components";
+import { useSelector } from "react-redux";
+import { RootState } from "../../../store";
 
 const FooterlIconsStyle = styled.div`
   display: flex;
@@ -49,10 +51,12 @@ const shareOnX = () => {
   };
 
 export const SNSIcons = () => {
+  const currentTrick = useSelector((state: RootState) => state.gameState.currentTrick);
   return (
     <FooterlIconsStyle>
-      <StyledXIcon onClick={shareOnX}/>
-      <StyledTwitterIcon  onClick={shareOnTwitter}/>
+      {currentTrick == "Twitterのロゴ" ? <StyledTwitterIcon  onClick={shareOnTwitter}/>: <StyledXIcon onClick={shareOnX}/>}
+      
+      
       <StyledFacebookIcon  onClick={shareOnFacebook}/>
       <StyledInstagramIcon  onClick={shareOnInstagram}/>
     </FooterlIconsStyle>

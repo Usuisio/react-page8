@@ -6,11 +6,10 @@ import "../../../App.css";
 const stationPath = "./images/station.png";
 
 const ChatbotPRStyle = styled.div`
-  position: "relative";
-
   flex: 1;
   border: 5px solid white;
   background-image: url(${stationPath});
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
