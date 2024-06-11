@@ -2,13 +2,19 @@ import styled from "styled-components";
 import "../../../App.css";
 import { useTranslation } from "react-i18next";
 import { HachitanCircle } from "../chatbotPR/hachitanCircle";
+import { useSelector } from "react-redux";
+import { RootState } from "../../../store";
 
 const stationPath = "./images/sasayama.png";
 
-const HolidayPRStyle = styled.div`
+interface HolidayPRProps {
+  imagePath: string;
+}
+
+const HolidayPRStyle = styled.div<HolidayPRProps>`
 flex: 1;
 border: 5px solid white;
-  background-image: url(${stationPath});
+  background-image: url(${props => props.imagePath});
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -61,11 +67,27 @@ const PStyle = styled.p`
 
 export const HolidayPR = () => {
     const { t } = useTranslation();
+    const currentTrick = useSelector( (state: RootState) => state.gameState.currentTrick);
+    const imagePath = 
+    currentTrick === "画像全部ハチタン" ? "./images/Hachitan_trim.png" 
+    :currentTrick === "背景マゼンタ" ? "./images/magenta.png" 
+    : "./images/sasayama.png";
   return (
-    <HolidayPRStyle>
+
+    <HolidayPRStyle imagePath={imagePath}>
       <HolidayPROverlayStyle>
+      {      currentTrick === "ガタンゴトン" ?
+      <>
+      <HeadlineStyle>{t("HolidayPRTitle_Gatangoton")}</HeadlineStyle>
+      <PStyle>{t("HolidayPRDetail_Gatangoton")}</PStyle>
+    </>
+    :
+
+        <>
         <HeadlineStyle>{t("HolidayPRTitle")}</HeadlineStyle>
         <PStyle>{t("HolidayPRDetail")}</PStyle>
+      </>
+      }
       </HolidayPROverlayStyle>
     </HolidayPRStyle>
   );

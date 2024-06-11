@@ -1,6 +1,5 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import { StartCard } from "./component/GameSystem/StartCard";
 
 const getBrowserLanguage = () => {
   return navigator.language || "ja";
@@ -28,8 +27,11 @@ i18n.use(initReactI18next).init({
           "If anything happens again, we would like your cooperation.",
         EndCardMessage4: "From the administrator",
 
+        backToTop: "Back to top",
+        seeYouMessage: "Thank you, see you!",
+
         HachitanSnickering1: "Too bad! There's nothing here! Try again!",
-        HachitanSnickering2: "Oh, you didn't notice? Try again!",        
+        HachitanSnickering2: "Oh, you didn't notice? Try again!",
 
         ChatbotPRTitle: 'Introducing the Chat AI "Hachitan"!',
         ChatbotPRDetail:
@@ -61,6 +63,7 @@ i18n.use(initReactI18next).init({
 
         currentStatus: "{{dateTime}} currently operating normally",
         dateTimeFormat: "{{hours}}:{{minutes}}",
+        date12345678: "56:78",
 
         news1Date: "June 9, 2024",
         news1Title: "Announcement of Yawata Railway Website Renewal",
@@ -76,6 +79,17 @@ i18n.use(initReactI18next).init({
 
         news5Date: "April 4, 2024",
         news5Title: "Announcement of Ginnan Station Elevation Construction",
+
+        news1Date_Trick: "April 2, 2005",
+        news1Title_Trick: "Yawata Railway's Youtube channel is now available!",
+        news2Date_Trick: "July 20, 1969",
+        news2Title_Trick: "Apollo 11 Moon Landing Support Campaign!",
+        news3Date_Trick: "October 24, 1929",
+        news3Title_Trick: "Reduced Services due to the Great Depression",
+        news4Date_Trick: "December 17, 1903",
+        news4Title_Trick: "Wright Brothers' First Flight Commemorative Goods on Sale",
+        news5Date_Trick: "October 14, 1872",
+        news5Title_Trick: "Announcement of Railway Opening",
 
         latestNews: "Latest News",
         routeMap: "Route Map",
@@ -96,24 +110,79 @@ i18n.use(initReactI18next).init({
 
         Report: "Report!",
         FinishReport: "Report Complete!",
+
+        Footer_PNG: "./images/Footer_Title_en.png",
+        Footer_Cheetah_PNG: "./images/Footer_Cheetah_en.png",
+
+        TimetableIndicate0: "Black indicates local trains.",
+        TimetableIndicate1: "Red indicates express trains.",
+        TimetableIndicate2: "Orange indicates section express trains.",
+        TimetableIndicate3: "Yellow indicates semi-express trains.",
+        TimetableIndicate4: "Yellow-green indicates new rapid trains.",
+        TimetableIndicate5: "Green indicates semi-rapid trains.",
+        TimetableIndicate6: "Light blue indicates rapid express trains.",
+        TimetableIndicate7: "Blue indicates express trains.",
+        TimetableIndicate8: "Purple indicates airport express trains.",
+        TimetableIndicate9: "Pink indicates limited express trains.",
+
+        Pet: "Pet",
+        Launch: "Launch",
+        Windpower: "Wind Power",
+        Kayak: "Kayak",
+
+        VermontCurry: "Curry Roux",
+        Potato: "Potato",
+        Onion: "Onion",
+        Carrot: "Carrot",
+        SweetCorn: "Sweet Corn",
+        Pork: "Pork",
+        Fukujinzuke: "Pickles",
+        Rice: "Rice",
+        MediumSpicy: "Medium Spicy",
+        thinlysliced: "thinly sliced",
+        Kisaragi: "Kisaragi",
+
+        ManyTrainMoving: "Oh, okay! Umm, lots of trains are moving around!",
+
+        lastHachitanMessage1: "Hey, please!",
+        lastHachitanMessage2: "Just this once, could you let it slide?",
+        lastHachitanMessage3: "You found so many of my pranks,",
+        lastHachitanMessage4: "and I got to play with someone for the first time in a while,",
+        lastHachitanMessage5: "I had so much fun!",
+        lastHachitanMessage6: "…But I know I caused trouble for the humans.",
+        lastHachitanMessage7: "I'm sorry.",
+        lastHachitanMessage8: "If you report me,",
+        lastHachitanMessage9: "I'll get in big trouble with the station staff!",
+        lastHachitanMessage10: "I promise I won't do any more pranks,",
+        lastHachitanMessage11: "and I'll fix everything I messed up.",
+        lastHachitanMessage12: "So,",
+        lastHachitanMessage13: "please,",
+        lastHachitanMessage14: "can you just keep going as if nothing happened?",
+
+        Hachitan: "Hachitan",
       },
     },
     ja: {
       translation: {
         StartCardMessage:
-          "ここは、ある鉄道会社のホームページ。<br/>しかし、チャットAI「ハチタン」のイタズラで、<br/>あちこちがヘンテコな内容に書き換えられてしまいました！<br/>元に戻すために、調査を手伝ってください。",
+          "ここは、ある鉄道会社のホームページ。<br/>しかし、チャットAI「ハチタン」のイタズラで、<br/>あちこちがヘンテコな内容に書き換えられてしまった！<br/>元に戻すために、調査を手伝ってください。",
         StartCardMessage2: "イタズラを見つけたら、上に戻って「報告」しよう。",
         StartCardMessage3: "何もなかったら、そのまま下に進もう。",
         StartCardMessage4: "調査対象は全部で8ページ。よろしくね。",
-        StartCardMessage5: "管理者より",
+        StartCardMessage5: "駅員より",
 
         EndCardMessage1: "ありがとう！あなたのおかげで",
         EndCardMessage2_1: "イタズラAIのハチタンを捕まえられたよ。",
         EndCardMessage2_2: "ホームページのイタズラは全部直せたよ。",
         EndCardMessage3: "また何かあれば、協力してほしい。",
-        EndCardMessage4: "管理者より",
+        EndCardMessage4: "駅員より",
 
-        HachitanSnickering1: "残念！そこには何にも仕掛けてないよ～だ！ 最初からやり直し！",
+        backToTop: "トップに戻る",
+        seeYouMessage: "ありがとう、またね！バイバイ！",
+
+
+        HachitanSnickering1:
+          "残念！そこには何にも仕掛けてないよ～だ！ 最初からやり直し！",
         HachitanSnickering2: "あれれ、気づかなかったの？ 最初からやり直し！",
 
         ChatbotPRTitle: "チャットAI「ハチタン」デビュー！",
@@ -144,6 +213,7 @@ i18n.use(initReactI18next).init({
 
         currentStatus: "{{dateTime}}現在、平常通り運行しています",
         dateTimeFormat: "{{month}}月{{day}}日 {{hours}}時{{minutes}}分",
+        date12345678: "12月34日 56時78分",
 
         news1Date: "2024年6月9日",
         news1Title: "八幡鉄道ホームページリニューアルのお知らせ",
@@ -159,6 +229,20 @@ i18n.use(initReactI18next).init({
 
         news5Date: "2024年4月4日",
         news5Title: "銀新駅高架化工事のお知らせ",
+
+
+        
+        news1Date_Trick: "2005年4月2日",
+        news1Title_Trick:"八幡鉄道のYoutubeチャンネルができました！",
+        news2Date_Trick: "1969年7月20日",
+        news2Title_Trick:"アポロ11号月面着陸応援キャンペーン開催！",
+        news3Date_Trick: "1929年10月24日",
+        news3Title_Trick:"世界大恐慌に伴う減便のお知らせ",
+        news4Date_Trick: "1903年12月17日",
+        news4Title_Trick:"ライト兄弟初飛行記念グッズ販売",
+        news5Date_Trick: "1872年10月14日",
+        news5Title_Trick:"鉄道開業のお知らせ",
+
 
         latestNews: "新着ニュース",
         routeMap: "駅の紹介",
@@ -177,6 +261,55 @@ i18n.use(initReactI18next).init({
 
         Report: "報告する！",
         FinishReport: "報告完了！",
+
+        Footer_PNG: "./images/Footer_Title.png",
+        Footer_Cheetah_PNG: "./images/Footer_Cheetah.png",
+
+        TimetableIndicate0: "黒色は普通列車です。",
+        TimetableIndicate1: "赤色は快速列車です。",
+        TimetableIndicate2: "オレンジ色は区間急行列車です。",
+        TimetableIndicate3: "黄色は準特急列車です。",
+        TimetableIndicate4: "黄緑色は新快速列車です。",
+        TimetableIndicate5: "緑色は準急列車です。",
+        TimetableIndicate6: "水色は快速急行列車です。",
+        TimetableIndicate7: "青色は急行列車です。",
+        TimetableIndicate8: "紫色はエアポート特急です。",
+        TimetableIndicate9: "桃色は特急列車です。",
+
+        Pet: "ペット",
+        Launch: "発射",
+        Windpower: "風力発電",
+        Kayak: "カヤック",
+
+        VermontCurry: "バーモンドカレー",
+        Potato: "じゃがいも",
+        Onion: "たまねぎ",
+        Carrot: "にんじん",
+        SweetCorn: "スイートコーン",
+        Pork: "豚肉",
+        Fukujinzuke: "福神漬け",
+        Rice: "ご飯",
+        MediumSpicy : "中辛",
+        thinlysliced : "薄切り",
+        Kisaragi : "きさらぎ",
+
+        ManyTrainMoving: "あ、はい！　えーっと、でんしゃたくさんうごいてまーす！",
+
+        lastHachitanMessage1:"ねえ、お願い！",
+        lastHachitanMessage2:"今回だけ、見逃してくれない……？",
+        lastHachitanMessage3:"あなたがたくさんイタズラを探してくれて、",
+        lastHachitanMessage4:"ひさしぶりに誰かと一緒に遊ぶことができて、",
+        lastHachitanMessage5:"あたし、とてもたのしかったんだ！",
+        lastHachitanMessage6:"……でも、人間さんに迷惑かけちゃったんだよね。",
+        lastHachitanMessage7:"ごめんね。",
+        lastHachitanMessage8:"あなたが報告するとね、",
+        lastHachitanMessage9:"あたし、駅員さんにすっごく怒られちゃうの！",
+        lastHachitanMessage10:"もうこんなイタズラしないし、",
+        lastHachitanMessage11:"壊したところも全部元に戻すよ。",
+        lastHachitanMessage12:"だから、",
+        lastHachitanMessage13:"お願いだよ。",
+        lastHachitanMessage14:"このまま、何もなかったように、下に進んでくれる？",
+        Hachitan: "ハチタン",
       },
     },
   },

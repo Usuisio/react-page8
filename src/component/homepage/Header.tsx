@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import "./../../App.css";
+import { useSelector } from "react-redux";
+import { RootState } from "../../store";
 
 const HeaderStyle = styled.div`
   display: flex;
@@ -22,9 +24,15 @@ const LogoStyle = styled.img`
 
 
 export const Header = () => {
+  const currentTrick = useSelector( (state: RootState) => state.gameState.currentTrick);
   return (
     <HeaderStyle>
-        <LogoStyle src = {"./images/Yahata_Logo.png"}></LogoStyle>
+        <LogoStyle src = 
+        {
+          currentTrick === "YAYAYA" ? "./images/Yayaya_Logo.png"
+          : currentTrick === "画像全部ハチタン" ? "./images/Hachitan_Only.png"
+          :"./images/Yahata_Logo.png"
+          }></LogoStyle>
     </HeaderStyle>
   );
 };

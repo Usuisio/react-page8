@@ -2,6 +2,8 @@ import styled from "styled-components";
 import { Box } from "@mui/material";
 import { RouteMapGraph } from "./RouteMapGraph";
 import { useTranslation } from "react-i18next";
+import { useSelector } from "react-redux";
+import { RootState } from "../../../store";
 
 const RouteContainer = styled(Box)`
   display: flex;
@@ -11,10 +13,11 @@ const RouteContainer = styled(Box)`
 `;
 
 export const RouteMap = () => {
+  const currentTrick = useSelector((state: RootState) => state.gameState.currentTrick);
   const { t } = useTranslation();
   return (
   <RouteContainer>
-    <h1>{t("routeMap")}</h1>
+    <h1>{currentTrick === "ページ8" ? t("lastHachitanMessage12"):t("routeMap")}</h1>
     <RouteMapGraph />
   </RouteContainer>
 )

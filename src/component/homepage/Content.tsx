@@ -24,6 +24,19 @@ const ContentStyle = styled.div`
   gap: 20px;
 `;
 
+const stationPath = "./images/Hachitan_Only.png";
+const ContentStyle_AllHachitan = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(${stationPath});
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+`;
+
 const GraphDivStyle = styled.div`
   display: flex;
   flex-direction: row;
@@ -35,23 +48,49 @@ const GraphDivStyle = styled.div`
 `;
 
 export const Content = () => {
-  const currentTrick = useSelector((state: RootState) => state.gameState.currentTrick);
+  const currentTrick = useSelector(
+    (state: RootState) => state.gameState.currentTrick
+  );
   return (
-    <ContentStyle>
-      {
-        currentTrick === "ハチタンが大きい" && 
-        <BigHachitanImage />
-      }  
-      <CarouselPR />
-      <Topics />
-      <TrainStatus />
-      <NewsFeed />
-      <GraphDivStyle>
-        <RouteMap />
-        <Timetable />
-      </GraphDivStyle>
-      <WallCrack />
-      <SNSIcons />
-    </ContentStyle>
+    <>
+      {currentTrick === "画像全部ハチタン" ? (
+        <ContentStyle_AllHachitan>
+          <CarouselPR />
+          <Topics />
+          <TrainStatus />
+          <NewsFeed />
+          <GraphDivStyle>
+            <RouteMap />
+            <Timetable />
+          </GraphDivStyle>
+          <SNSIcons />
+        </ContentStyle_AllHachitan>
+      ) : currentTrick === "運行状況しかない" ? (
+        
+        <ContentStyle>
+          <div></div>
+          <div></div>
+          <div></div>
+        <TrainStatus />
+        <div></div>
+        <div></div>
+        <div></div>
+        </ContentStyle>
+      ) : (
+        <ContentStyle>
+          {currentTrick === "ハチタンが大きい" && <BigHachitanImage />}
+          <CarouselPR />
+          <Topics />
+          <TrainStatus />
+          {currentTrick !== "ニュースを見せない" && <NewsFeed />}
+          <GraphDivStyle>
+            <RouteMap />
+            <Timetable />
+          </GraphDivStyle>
+          {currentTrick === "押すな！ボタン" && <WallCrack />}
+          <SNSIcons />
+        </ContentStyle>
+      )}
+    </>
   );
 };

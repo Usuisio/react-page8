@@ -18,7 +18,12 @@ export const HachitanImage = () => {
           src="/images/Hachitan_Background.png"
           alt="Illustration"
         />
-      ) : (
+      ) : currentTrick === "ハチタンの顔が悪い" ? (
+        <HachitanImageStyle
+          src="/images/Hachitan_Dark_trim.png"
+          alt="Illustration"
+        />
+      ) :(
         <HachitanImageStyle
           src="/images/Hachitan_trim.png"
           alt="Illustration"

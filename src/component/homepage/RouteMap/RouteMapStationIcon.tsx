@@ -7,6 +7,15 @@ import FestivalIcon from "@mui/icons-material/Festival";
 import ForestIcon from "@mui/icons-material/Forest";
 import BusinessIcon from "@mui/icons-material/Business";
 import CastleIcon from "@mui/icons-material/Castle";
+import RestaurantIcon from '@mui/icons-material/Restaurant';
+import GrassIcon from '@mui/icons-material/Grass';
+import TapasIcon from '@mui/icons-material/Tapas';
+import KebabDiningIcon from '@mui/icons-material/KebabDining';
+import LocalPizzaIcon from '@mui/icons-material/LocalPizza';
+import TakeoutDiningIcon from '@mui/icons-material/TakeoutDining';
+import RiceBowlIcon from '@mui/icons-material/RiceBowl';
+import SetMealIcon from '@mui/icons-material/SetMeal';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
 
 
 const StationIconStyle = styled.div`
@@ -35,6 +44,15 @@ const StyledFlightIcon = styled(FlightIcon)`${iconStyles}`;
 const StyledFestivalIcon = styled(FestivalIcon)`${iconStyles}`;
 const StyledForestIcon = styled(ForestIcon)`${iconStyles}`;
 const StyledCastleIcon = styled(CastleIcon)`${iconStyles}`;
+const StyledRestaurantIcon = styled(RestaurantIcon)`${iconStyles}`;
+const StyledGrassIcon = styled(GrassIcon)`${iconStyles}`;
+const StyledTapasIcon = styled(TapasIcon)`${iconStyles}`;
+const StyledKebabDiningIcon = styled(KebabDiningIcon)`${iconStyles}`;
+const StyledLocalPizzaIcon = styled(LocalPizzaIcon)`${iconStyles}`;
+const StyledTakeoutDiningIcon = styled(TakeoutDiningIcon)`${iconStyles}`;
+const StyledSetMealIcon = styled(SetMealIcon)`${iconStyles}`;
+const StyledRiceBowlIcon = styled(RiceBowlIcon)`${iconStyles}`;
+const StyledDarkModeIcon = styled(DarkModeIcon)`${iconStyles}`;
 
 
 
@@ -47,6 +65,15 @@ const IconMap = {
     "TsuyamaStadium": StyledStadiumIcon,
     "Tsuyama": StyledFestivalIcon,
     "Airport": StyledFlightIcon,
+    "VermontCurry": StyledRestaurantIcon,
+    "Potato": StyledGrassIcon,
+    "Onion": StyledTapasIcon,
+    "Carrot": StyledKebabDiningIcon,
+    "SweetCorn": StyledLocalPizzaIcon,
+    "Pork": StyledTakeoutDiningIcon,
+    "Fukujinzuke":  StyledSetMealIcon,
+    "Rice": StyledRiceBowlIcon,
+    "Kisaragi": StyledDarkModeIcon,
 };
 
 export type stations =
@@ -58,6 +85,15 @@ export type stations =
   | "TsuyamaStadium"
   | "Tsuyama"
   | "Airport"
+  | "VermontCurry"
+  | "Potato"
+  | "Onion"
+  | "Carrot"
+  | "SweetCorn"
+  | "Pork"
+  | "Fukujinzuke"
+  | "Rice"
+  | "Kisaragi"
   ;
 
 interface StationIconProps {

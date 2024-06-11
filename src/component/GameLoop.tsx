@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { StartCard, EndCard_Bottom } from "./GameSystem/StartCard";
+import { StartCard, EndCard_Bottom, EndCard_Top } from "./GameSystem/StartCard";
 import { useEffect, useRef, useState } from "react";
 import { CycleSet } from "./GameSystem/CycleSet";
 import { useDispatch, useSelector } from "react-redux";
@@ -9,6 +9,7 @@ import { ReportButton } from "./GameSystem/ReportButton";
 import { t } from "i18next";
 import { HachitanMessage } from "./GameSystem/HachitanMessage";
 import { MarginDiv, MarginDiv_Small } from "./GameSystem/MarginDiv";
+import { HachitanHint } from "./GameSystem/HachitanHint";
 
 const GameLoopStyle = styled.div`
   display: flex;
@@ -42,6 +43,9 @@ export const GameLoop = () => {
   const dispatch = useDispatch();
   const currentTrick = useSelector(
     (state: RootState) => state.gameState.currentTrick
+  );
+  const prevTrick = useSelector(
+    (state: RootState) => state.gameState.prevTrick
   );
   const count = useSelector((state: RootState) => state.gameState.count);
 
@@ -87,20 +91,28 @@ export const GameLoop = () => {
             message={t("HachitanSnickering1")}
           ></HachitanMessage>
         )}
-  
+
         {!shownStartCard && count === 0 && !pushedReportButtonAtLatest && (
-          <HachitanMessage
-            type={"Snicker"}
-            message={t("HachitanSnickering2")}
-          ></HachitanMessage>
+          <>
+            <HachitanMessage
+              type={"Snicker"}
+              message={t("HachitanSnickering2")}
+            ></HachitanMessage>
+            <HachitanHint hint={`/images/Hint/${prevTrick}.png`} />
+          </>
         )}
       </>
     );
-  }
-
+  };
 
   return (
     <GameLoopStyle>
+    {count >= 9 ? (
+      <CardCoordinator>
+        <EndCard_Top />
+      </CardCoordinator>
+    ) : (
+      <>
       {shownStartCard ? (
         <>
           <CardCoordinator>
@@ -126,7 +138,7 @@ export const GameLoop = () => {
         <CycleSet setShownReportButton={setShownReportButton} />
       </div>
 
-      {count >= 8 ? (
+      {count == 8 ? (
         <CardCoordinator>
           <EndCard_Bottom />
         </CardCoordinator>
@@ -141,6 +153,8 @@ export const GameLoop = () => {
           ></div>
         </>
       )}
+      </>
+    )}
     </GameLoopStyle>
   );
 };

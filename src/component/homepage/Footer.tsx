@@ -1,13 +1,16 @@
 import styled from "styled-components";
 import { SNSIcons } from "./SNSIcons/SNSIcons";
+import { useTranslation } from "react-i18next";
+import { useSelector } from "react-redux";
+import { RootState } from "../../store";
 
 const FooterStyle = styled.div`
-    background-color: ${({theme})=>theme.colors.primary};;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    width:100%;
-    `
+  background-color: ${({ theme }) => theme.colors.primary};
+  color: white;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+`;
 const LogoStyle = styled.img`
   padding: 10px;
   text-align: center;
@@ -15,9 +18,23 @@ const LogoStyle = styled.img`
 `;
 
 export const Footer = () => {
-    return (
-        <FooterStyle>
-        <LogoStyle src = {"./images/Footer_Title.png"}></LogoStyle>
-        </FooterStyle>
-    )
-}
+  const { t } = useTranslation();
+  const currentTrick = useSelector(
+    (state: RootState) => state.gameState.currentTrick
+  );
+  return (
+    <>
+      <FooterStyle>
+        <LogoStyle
+          src={
+            currentTrick === "チーターよりはやい！"
+              ? t("Footer_Cheetah_PNG")
+              : currentTrick === "画像全部ハチタン"
+              ? "./images/Hachitan_Only.png"
+              : t("Footer_PNG")
+          }
+        ></LogoStyle>
+      </FooterStyle>
+    </>
+  );
+};
