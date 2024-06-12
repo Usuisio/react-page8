@@ -24,7 +24,7 @@ const ContentStyle = styled.div`
   gap: 20px;
 `;
 
-const stationPath = "/yahata-railway/images/Hachitan_Only.png";
+const stationPath = "$(import.meta.env.BASE_URL}images/Hachitan_Only.png";
 const ContentStyle_AllHachitan = styled.div`
   position: relative;
   display: flex;

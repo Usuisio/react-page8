@@ -112,8 +112,8 @@ i18n.use(initReactI18next).init({
         Report: "Report!",
         FinishReport: "Report Complete!",
 
-        Footer_PNG: "/yahata-railway/images/Footer_Title_en.png",
-        Footer_Cheetah_PNG: "/yahata-railway/images/Footer_Cheetah_en.png",
+        Footer_PNG: "$(import.meta.env.BASE_URL}images/Footer_Title_en.png",
+        Footer_Cheetah_PNG: "$(import.meta.env.BASE_URL}images/Footer_Cheetah_en.png",
 
         TimetableIndicate0: "Black indicates local trains.",
         TimetableIndicate1: "Red indicates express trains.",
@@ -264,8 +264,8 @@ i18n.use(initReactI18next).init({
         Report: "報告する！",
         FinishReport: "報告完了！",
 
-        Footer_PNG: "/yahata-railway/images/Footer_Title.png",
-        Footer_Cheetah_PNG: "/yahata-railway/images/Footer_Cheetah.png",
+        Footer_PNG: "$(import.meta.env.BASE_URL}images/Footer_Title.png",
+        Footer_Cheetah_PNG: "$(import.meta.env.BASE_URL}images/Footer_Cheetah.png",
 
         TimetableIndicate0: "黒色は普通列車です。",
         TimetableIndicate1: "赤色は快速列車です。",

@@ -29,7 +29,7 @@ export const WallCrack = () => {
     <WallCrackDivStyle>
       <WallCrackImgContainer>
         {buttonState ? (
-          <WallCrackStyle src="/yahata-railway/images/Crack.png" />
+          <WallCrackStyle src="$(import.meta.env.BASE_URL}images/Crack.png" />
         ) : (
           <Button
             variant="contained"

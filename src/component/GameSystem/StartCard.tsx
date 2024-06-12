@@ -55,9 +55,9 @@ const MessageDiv = styled.div`
 
 export const StartCard = () => {
   const { t } = useTranslation();
-  let wantedImagePath = "/yahata-railway/images/Wanted1.png";
+  let wantedImagePath = "$(import.meta.env.BASE_URL}images/Wanted1.png";
   const handleHover = () => {
-    wantedImagePath = "/yahata-railway/images/Wanted2.png";
+    wantedImagePath = "$(import.meta.env.BASE_URL}images/Wanted2.png";
   }
   return (
     <>

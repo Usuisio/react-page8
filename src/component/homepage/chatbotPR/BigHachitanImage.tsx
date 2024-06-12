@@ -13,5 +13,5 @@ const HachitanOverImageStyle = styled.img`
   }
 `;
 export const BigHachitanImage = () => (
-  <HachitanOverImageStyle src="/yahata-railway/images/Hachitan_Only.png" alt="Illustration" />
+  <HachitanOverImageStyle src="$(import.meta.env.BASE_URL}images/Hachitan_Only.png" alt="Illustration" />
 );

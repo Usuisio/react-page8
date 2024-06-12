@@ -98,7 +98,7 @@ export const GameLoop = () => {
               type={"Snicker"}
               message={t("HachitanSnickering2")}
             ></HachitanMessage>
-            <HachitanHint hint={`/yahata-railway/images/Hint/${prevTrick}.png`} />
+            <HachitanHint hint={`$(import.meta.env.BASE_URL}images/Hint/${prevTrick}.png`} />
           </>
         )}
       </>
