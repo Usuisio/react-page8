@@ -1,7 +1,6 @@
-import { Button, Paper, Typography } from "@mui/material";
+import { Button, Paper } from "@mui/material";
 import { Trans, useTranslation } from "react-i18next";
 import styled from "styled-components";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { HachitanMiniIcon } from "./hachitanMiniIcon";
 import { useState } from "react";
 
@@ -56,9 +55,9 @@ const MessageDiv = styled.div`
 
 export const StartCard = () => {
   const { t } = useTranslation();
-  let wantedImagePath = "/images/Wanted1.png";
+  let wantedImagePath = "/yahata-railway/images/Wanted1.png";
   const handleHover = () => {
-    wantedImagePath = "/images/Wanted2.png";
+    wantedImagePath = "/yahata-railway/images/Wanted2.png";
   }
   return (
     <>

@@ -29,9 +29,9 @@ export const Header = () => {
     <HeaderStyle>
         <LogoStyle src = 
         {
-          currentTrick === "YAYAYA" ? "./images/Yayaya_Logo.png"
-          : currentTrick === "画像全部ハチタン" ? "./images/Hachitan_Only.png"
-          :"./images/Yahata_Logo.png"
+          currentTrick === "YAYAYA" ? "/yahata-railway/images/Yayaya_Logo.png"
+          : currentTrick === "画像全部ハチタン" ? "/yahata-railway/images/Hachitan_Only.png"
+          :"/yahata-railway/images/Yahata_Logo.png"
           }></LogoStyle>
     </HeaderStyle>
   );

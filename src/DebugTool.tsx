@@ -1,6 +1,5 @@
 
 import { useDispatch, useSelector } from "react-redux";
-import { setLanguage } from "./languageSlice";
 import { FormControl, InputLabel, MenuItem, Select, SelectChangeEvent } from "@mui/material";
 import { setTrick_Debug } from "./gameSlice";
 import { RootState } from "./store";

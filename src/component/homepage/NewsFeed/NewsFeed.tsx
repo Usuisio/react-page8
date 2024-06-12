@@ -1,6 +1,5 @@
 import {
   Container,
-  Typography,
   List,
   ListItem,
   ListItemText,

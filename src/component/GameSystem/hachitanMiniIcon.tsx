@@ -27,11 +27,11 @@ export const HachitanMiniIcon = ({ type }: HachitanMiniIconProps) => {
     <>
       <CircleStyle>
         {type === "Smile" ? (
-          <HachitanImageStyle src="/images/HachitanIconSmile.png" />
+          <HachitanImageStyle src="/yahata-railway/images/HachitanIconSmile.png" />
         ) : type === "Snicker" ? (
-          <HachitanImageStyle src="/images/HachitanIconSnicker.png" />
+          <HachitanImageStyle src="/yahata-railway/images/HachitanIconSnicker.png" />
         ) : (
-          <HachitanImageStyle src="/images/HachitanIconCry.png" />
+          <HachitanImageStyle src="/yahata-railway/images/HachitanIconCry.png" />
         )}
       </CircleStyle>
     </>

@@ -42,7 +42,6 @@ const STATIC_TRICK_LIST = [
   "背景マゼンタ",
   "180度回転",
   "でんしゃたくさんうごいてます",
-  "ページ8",
 ];
 
 const initialState = {
@@ -71,7 +70,7 @@ const gameSlice = createSlice({
   name: "gameState",
   initialState,
   reducers: {
-    correct: (state, action: PayloadAction<string>) => {
+    correct: (state) => {
       state.count++;
 
       state.prevTrick = state.currentTrick;
@@ -84,8 +83,9 @@ const gameSlice = createSlice({
       const result = getRandomItemAndRemove(state.remainingTricksList);
       state.currentTrick = result.item;
       state.remainingTricksList = result.newArray;
+      console.log("次は……" + state.currentTrick);
     },
-    mistake: (state, action: PayloadAction<string>) => {
+    mistake: (state) => {
       state.count = 0;
       state.remainingTricksList = STATIC_TRICK_LIST;
 

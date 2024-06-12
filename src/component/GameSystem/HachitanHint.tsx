@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { HachitanMiniIcon } from "./hachitanMiniIcon";
 import { useState } from "react";
 
 const HintDivStyle = styled.div`
@@ -52,11 +51,6 @@ export const HachitanHint = ({ hint }: HachitanMiniIconProps) => {
 
   const handleMouseLeave = () => {
     setIsHovered(false);
-  };
-
-  const defaultStyle = {
-    transition: "opacity 200ms ease-in-out",
-    opacity: isHovered ? 0 : 1,
   };
 
   const hoveredStyle = {

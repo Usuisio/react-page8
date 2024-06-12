@@ -8,9 +8,8 @@ import { correct, mistake } from "../gameSlice";
 import { ReportButton } from "./GameSystem/ReportButton";
 import { t } from "i18next";
 import { HachitanMessage } from "./GameSystem/HachitanMessage";
-import { MarginDiv, MarginDiv_Small } from "./GameSystem/MarginDiv";
+import { MarginDiv } from "./GameSystem/MarginDiv";
 import { HachitanHint } from "./GameSystem/HachitanHint";
-import { Footer } from "./homepage/Footer";
 import { PageHeader } from "./PageHeader";
 
 const GameLoopStyle = styled.div`
@@ -58,7 +57,7 @@ export const GameLoop = () => {
         shownStartCard && setShownStartCard(false);
         setPushedReportButtonAtLatest(false);
         //判定！
-        dispatch(currentTrick === "" ? correct("") : mistake(""));
+        dispatch(currentTrick === "" ? correct() : mistake());
         pageContainerRef.current &&
           window.scrollTo(0, pageContainerRef.current.offsetTop);
       }
@@ -99,7 +98,7 @@ export const GameLoop = () => {
               type={"Snicker"}
               message={t("HachitanSnickering2")}
             ></HachitanMessage>
-            <HachitanHint hint={`/images/Hint/${prevTrick}.png`} />
+            <HachitanHint hint={`/yahata-railway/images/Hint/${prevTrick}.png`} />
           </>
         )}
       </>

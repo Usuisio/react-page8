@@ -14,9 +14,6 @@ const TopicsItemStyle = styled.div`
 const TopicNameStyle = styled.h1`
     color: ${({theme})=>theme.colors.primary};
     `;
-const TopicDetailStyle = styled.p`
-    color: ${({theme})=>theme.colors.secondary};
-    `;
 
 interface TopicsItemProps {
     children?: ReactNode;

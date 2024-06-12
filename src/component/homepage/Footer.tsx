@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { SNSIcons } from "./SNSIcons/SNSIcons";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { RootState } from "../../store";
@@ -30,7 +29,7 @@ export const Footer = () => {
             currentTrick === "チーターよりはやい！"
               ? t("Footer_Cheetah_PNG")
               : currentTrick === "画像全部ハチタン"
-              ? "./images/Hachitan_Only.png"
+              ? "/yahata-railway/images/Hachitan_Only.png"
               : t("Footer_PNG")
           }
         ></LogoStyle>

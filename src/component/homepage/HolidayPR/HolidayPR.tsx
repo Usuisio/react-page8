@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import "../../../App.css";
 import { useTranslation } from "react-i18next";
-import { HachitanCircle } from "../chatbotPR/hachitanCircle";
 import { useSelector } from "react-redux";
 import { RootState } from "../../../store";
 
@@ -67,9 +66,9 @@ export const HolidayPR = () => {
     const { t } = useTranslation();
     const currentTrick = useSelector( (state: RootState) => state.gameState.currentTrick);
     const imagePath = 
-    currentTrick === "画像全部ハチタン" ? "./images/Hachitan_trim.png" 
-    :currentTrick === "背景マゼンタ" ? "./images/magenta.png" 
-    : "./images/sasayama.png";
+    currentTrick === "画像全部ハチタン" ? "/yahata-railway/images/Hachitan_trim.png" 
+    :currentTrick === "背景マゼンタ" ? "/yahata-railway/images/magenta.png" 
+    : "/yahata-railway/images/sasayama.png";
   return (
 
     <HolidayPRStyle imagepath={imagePath}>

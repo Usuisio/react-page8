@@ -7,16 +7,9 @@ import {
   Select,
   SelectChangeEvent,
 } from "@mui/material";
-import styled from "styled-components";
 import { RootState } from "./store";
-import { useTranslation } from "react-i18next";
-
-const SelectStyle = styled(Select)`
-  background-color: white;
-`;
 
 export const LanguageSwitcher = () => {
-  const { t } = useTranslation();
   const dispatch = useDispatch();
   const language = useSelector((state: RootState) => state.language.language);
   const handleLanguageChange = (e: SelectChangeEvent<string>) => {
@@ -27,10 +20,10 @@ export const LanguageSwitcher = () => {
     <>
       <FormControl fullWidth>
         <InputLabel>Language</InputLabel>
-        <SelectStyle label="Language" onChange={handleLanguageChange} value={language}>
+        <Select label="Language" onChange={handleLanguageChange} value={language} variant="filled">
           <MenuItem value="ja">日本語</MenuItem>
           <MenuItem value="en">English</MenuItem>
-        </SelectStyle>
+        </Select>
       </FormControl>
     </>
   );
