@@ -4,6 +4,15 @@ const STATIC_TRICK_LIST = [
   "",
   "",
   "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
   "ハチタンが大きい",
   "ハチタンが大きい",
   "404",
@@ -37,7 +46,7 @@ const STATIC_TRICK_LIST = [
 ];
 
 const initialState = {
-  count: 7,
+  count: 0,
   remainingTricksList: STATIC_TRICK_LIST,
   currentTrick: "",
   prevTrick: "",
@@ -63,7 +72,6 @@ const gameSlice = createSlice({
   initialState,
   reducers: {
     correct: (state, action: PayloadAction<string>) => {
-      console.log(state.currentTrick + " " + state.count);
       state.count++;
 
       state.prevTrick = state.currentTrick;
@@ -78,7 +86,6 @@ const gameSlice = createSlice({
       state.remainingTricksList = result.newArray;
     },
     mistake: (state, action: PayloadAction<string>) => {
-      console.log("mistake " + state.currentTrick + " " + state.count);
       state.count = 0;
       state.remainingTricksList = STATIC_TRICK_LIST;
 

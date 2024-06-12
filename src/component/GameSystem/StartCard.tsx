@@ -1,4 +1,4 @@
-import { Button, Paper } from "@mui/material";
+import { Button, Paper, Typography } from "@mui/material";
 import { Trans, useTranslation } from "react-i18next";
 import styled from "styled-components";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
@@ -12,7 +12,7 @@ const StartCardStyle = styled(Paper)`
   align-items: center;
   background-color: #fff4f4;
   padding: 50px;
-  max-width: 560px;
+  max-width: 800px;
   border: 6px dashed #e3b4cb;
 `;
 
@@ -29,26 +29,63 @@ justify-content: flex-end;
   flex: 1;
 `;
 
+const ImgStyle = styled.img`
+  width: 600px;
+  max-width: 100%;
+  height: auto;
+  padding: 20px;
+
+`;
+  
+const TitleZoneDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+`;
+
+const MessageDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-width: 370px;
+`;
+
+
 export const StartCard = () => {
   const { t } = useTranslation();
+  let wantedImagePath = "/images/Wanted1.png";
+  const handleHover = () => {
+    wantedImagePath = "/images/Wanted2.png";
+  }
   return (
+    <>
+    <TitleZoneDiv>
+
+    <ImgStyle src={wantedImagePath} onMouseEnter={handleHover}/>
+    <MessageDiv>
+    <h1>{t("StartCardTitle")}</h1>
+      <Trans i18nKey="StartCardMessage">
+        Welcome to our application.
+        <br />
+        We hope you have a great experience!
+      </Trans>
+    </MessageDiv>
+    </TitleZoneDiv>
     <StartCardStyle>
       <LeftAlignedText>
-        <Trans i18nKey="StartCardMessage">
-          Welcome to our application.
-          <br />
-          We hope you have a great experience!
-        </Trans>
-        <h3 style={{ color: "#CC1155" }}>{t("StartCardMessage2")}</h3>
-        <h3 style={{ color: "#1177CC" }}>{t("StartCardMessage3")}</h3>
+        <h2 style={{ color: "#CC1155" }}>{t("StartCardMessage2")}</h2>
+        <h2 style={{ color: "#1177CC" }}>{t("StartCardMessage3")}</h2>
 
-        <p style={{ color: "#black" }}>{t("StartCardMessage4")}</p>
+        {/* <p style={{ color: "#black" }}>{t("StartCardMessage4")}</p> */}
       </LeftAlignedText>
       <RightAlignedText>
-        <p style={{ color: "#black" }}>{t("StartCardMessage5")}</p>
+        {/* <p style={{ color: "#black" }}>{t("StartCardMessage5")}</p> */}
       </RightAlignedText>
-      <ArrowDropDownIcon></ArrowDropDownIcon>
     </StartCardStyle>
+    </>
   );
 };
 

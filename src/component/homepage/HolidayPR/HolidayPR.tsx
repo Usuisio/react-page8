@@ -5,16 +5,14 @@ import { HachitanCircle } from "../chatbotPR/hachitanCircle";
 import { useSelector } from "react-redux";
 import { RootState } from "../../../store";
 
-const stationPath = "./images/sasayama.png";
-
 interface HolidayPRProps {
-  imagePath: string;
+  imagepath: string;
 }
 
 const HolidayPRStyle = styled.div<HolidayPRProps>`
 flex: 1;
 border: 5px solid white;
-  background-image: url(${props => props.imagePath});
+  background-image: url(${props => props.imagepath});
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -74,7 +72,7 @@ export const HolidayPR = () => {
     : "./images/sasayama.png";
   return (
 
-    <HolidayPRStyle imagePath={imagePath}>
+    <HolidayPRStyle imagepath={imagePath}>
       <HolidayPROverlayStyle>
       {      currentTrick === "ガタンゴトン" ?
       <>

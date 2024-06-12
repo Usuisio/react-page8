@@ -10,6 +10,8 @@ import { t } from "i18next";
 import { HachitanMessage } from "./GameSystem/HachitanMessage";
 import { MarginDiv, MarginDiv_Small } from "./GameSystem/MarginDiv";
 import { HachitanHint } from "./GameSystem/HachitanHint";
+import { Footer } from "./homepage/Footer";
+import { PageHeader } from "./PageHeader";
 
 const GameLoopStyle = styled.div`
   display: flex;
@@ -55,7 +57,6 @@ export const GameLoop = () => {
       if (entry.isIntersecting) {
         shownStartCard && setShownStartCard(false);
         setPushedReportButtonAtLatest(false);
-        console.log(currentTrick);
         //判定！
         dispatch(currentTrick === "" ? correct("") : mistake(""));
         pageContainerRef.current &&
@@ -107,6 +108,8 @@ export const GameLoop = () => {
 
   return (
     <GameLoopStyle>
+    <PageHeader>
+    </PageHeader>
     {count >= 9 ? (
       <CardCoordinator>
         <EndCard_Top />

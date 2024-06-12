@@ -17,7 +17,6 @@ export const ReportButton = ({action}: ReportButtonProps) => {
     const handleReportButton = () => {
         action();
 
-      console.log(currentTrick);
       //判定！
       dispatch(currentTrick === "" ? mistake("") : correct(""));
     };

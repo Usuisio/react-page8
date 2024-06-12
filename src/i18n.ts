@@ -11,8 +11,9 @@ i18n.use(initReactI18next).init({
   resources: {
     en: {
       translation: {
+        StartCardTitle: "Catch the mischievous AI!",
         StartCardMessage:
-          "This is the homepage of a certain railway company. <br/> However, due to the mischief of the chat AI 'Hachitan', <br/> various contents have been changed to strange things! <br/> Please help us investigate to restore it to normal.",
+          "This is the homepage of a railway company. <br/> However, due to the mischief of the chat AI 'Hachitan', <br/> various contents have been changed to strange things! <br/> Please help us investigate to restore it.",
         StartCardMessage2:
           "If you find any mischief, go back up and 'report' it.",
         StartCardMessage3: "If there's nothing wrong, continue downwards.",
@@ -48,7 +49,7 @@ i18n.use(initReactI18next).init({
         Chatbot: "Chatbot",
 
         NishiYahata: "Nishi-Yahata",
-        YahatadaiKoko: "Yahata Center High School",
+        YahatadaiKoko: "Yahata High School",
         Ohgakubo: "Ohgakubo",
         YahataColorfulPark: "Yahata Colorful Park",
         Ginshin: "Ginshin",
@@ -97,7 +98,7 @@ i18n.use(initReactI18next).init({
 
         TransferToJRLine: "Transfer to JR Line",
         ConnectionBusesDepartFromPlatform1:
-          "Connection buses depart from platform 1",
+          "",
         TransferToSubwayLine: "Transfer to Subway Line",
         ExpressStopsOnGameDays: "Express stops on game days",
 
@@ -164,8 +165,9 @@ i18n.use(initReactI18next).init({
     },
     ja: {
       translation: {
+        StartCardTitle: "イタズラAIを捕まえろ！",
         StartCardMessage:
-          "ここは、ある鉄道会社のホームページ。<br/>しかし、チャットAI「ハチタン」のイタズラで、<br/>あちこちがヘンテコな内容に書き換えられてしまった！<br/>元に戻すために、調査を手伝ってください。",
+          "ここは、ある鉄道会社のホームページ。<br/>しかし、チャットAI「ハチタン」のイタズラで、<br/>あちこちがヘンテコな内容に変えられてしまった！<br/>元に戻すために、調査を手伝って。",
         StartCardMessage2: "イタズラを見つけたら、上に戻って「報告」しよう。",
         StartCardMessage3: "何もなかったら、そのまま下に進もう。",
         StartCardMessage4: "調査対象は全部で8ページ。よろしくね。",
