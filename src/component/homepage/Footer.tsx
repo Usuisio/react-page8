@@ -29,7 +29,7 @@ export const Footer = () => {
             currentTrick === "チーターよりはやい！"
               ? t("Footer_Cheetah_PNG")
               : currentTrick === "画像全部ハチタン"
-              ? "$(import.meta.env.BASE_URL}images/Hachitan_Only.png"
+              ? `${import.meta.env.BASE_URL}images/Hachitan_Only.png`
               : t("Footer_PNG")
           }
         ></LogoStyle>

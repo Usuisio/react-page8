@@ -66,9 +66,9 @@ export const HolidayPR = () => {
     const { t } = useTranslation();
     const currentTrick = useSelector( (state: RootState) => state.gameState.currentTrick);
     const imagePath = 
-    currentTrick === "画像全部ハチタン" ? "$(import.meta.env.BASE_URL}images/Hachitan_trim.png" 
-    :currentTrick === "背景マゼンタ" ? "$(import.meta.env.BASE_URL}images/magenta.png" 
-    : "$(import.meta.env.BASE_URL}images/sasayama.png";
+    currentTrick === "画像全部ハチタン" ? `${import.meta.env.BASE_URL}images/Hachitan_trim.png`
+    :currentTrick === "背景マゼンタ" ? `${import.meta.env.BASE_URL}images/magenta.png` 
+    : `${import.meta.env.BASE_URL}images/sasayama.png`;
   return (
 
     <HolidayPRStyle imagepath={imagePath}>

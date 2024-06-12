@@ -23,15 +23,16 @@ interface HachitanMiniIconProps {
 }
 
 export const HachitanMiniIcon = ({ type }: HachitanMiniIconProps) => {
+  const base_url = import.meta.env.BASE_URL;
   return (
     <>
       <CircleStyle>
         {type === "Smile" ? (
-          <HachitanImageStyle src="$(import.meta.env.BASE_URL}images/HachitanIconSmile.png" />
+          <HachitanImageStyle src={base_url + "images/HachitanIconSmile.png" }/>
         ) : type === "Snicker" ? (
-          <HachitanImageStyle src="$(import.meta.env.BASE_URL}images/HachitanIconSnicker.png" />
+          <HachitanImageStyle src={base_url + "images/HachitanIconSnicker.png"} />
         ) : (
-          <HachitanImageStyle src="$(import.meta.env.BASE_URL}images/HachitanIconCry.png" />
+          <HachitanImageStyle src={base_url + "images/HachitanIconCry.png"} />
         )}
       </CircleStyle>
     </>
