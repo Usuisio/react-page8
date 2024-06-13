@@ -21,9 +21,9 @@ const LeftAlignedText = styled.div`
 `;
 
 const RightAlignedText = styled.div`
-width: 100%;
-flex-direction: row;
-justify-content: flex-end;
+  width: 100%;
+  flex-direction: row;
+  justify-content: flex-end;
   text-align: right;
   flex: 1;
 `;
@@ -33,9 +33,8 @@ const ImgStyle = styled.img`
   max-width: 100%;
   height: auto;
   padding: 20px;
-
 `;
-  
+
 const TitleZoneDiv = styled.div`
   display: flex;
   justify-content: center;
@@ -52,38 +51,45 @@ const MessageDiv = styled.div`
   min-width: 370px;
 `;
 
-
 export const StartCard = () => {
   const { t } = useTranslation();
-  let wantedImagePath = `${import.meta.env.BASE_URL}images/Wanted1.png`;
+  const [wantedImagePath, setWantedImagePath] = useState(
+    `${import.meta.env.BASE_URL}images/Wanted1.png`
+  );
   const handleHover = () => {
-    wantedImagePath = `${import.meta.env.BASE_URL}images/Wanted2.png`;
-  }
+    setWantedImagePath(`${import.meta.env.BASE_URL}images/Wanted2.png`);
+  };
+  const handleLeave = () => {
+    setWantedImagePath(`${import.meta.env.BASE_URL}images/Wanted1.png`);
+  };
   return (
     <>
-    <TitleZoneDiv>
+      <TitleZoneDiv>
+        <ImgStyle
+          src={wantedImagePath}
+          onMouseEnter={handleHover}
+          onMouseLeave={handleLeave}
+        />
+        <MessageDiv>
+          <h1>{t("StartCardTitle")}</h1>
+          <Trans i18nKey="StartCardMessage">
+            Welcome to our application.
+            <br />
+            We hope you have a great experience!
+          </Trans>
+        </MessageDiv>
+      </TitleZoneDiv>
+      <StartCardStyle>
+        <LeftAlignedText>
+          <h2 style={{ color: "#CC1155" }}>{t("StartCardMessage2")}</h2>
+          <h2 style={{ color: "#1177CC" }}>{t("StartCardMessage3")}</h2>
 
-    <ImgStyle src={wantedImagePath} onMouseEnter={handleHover}/>
-    <MessageDiv>
-    <h1>{t("StartCardTitle")}</h1>
-      <Trans i18nKey="StartCardMessage">
-        Welcome to our application.
-        <br />
-        We hope you have a great experience!
-      </Trans>
-    </MessageDiv>
-    </TitleZoneDiv>
-    <StartCardStyle>
-      <LeftAlignedText>
-        <h2 style={{ color: "#CC1155" }}>{t("StartCardMessage2")}</h2>
-        <h2 style={{ color: "#1177CC" }}>{t("StartCardMessage3")}</h2>
-
-        {/* <p style={{ color: "#black" }}>{t("StartCardMessage4")}</p> */}
-      </LeftAlignedText>
-      <RightAlignedText>
-        {/* <p style={{ color: "#black" }}>{t("StartCardMessage5")}</p> */}
-      </RightAlignedText>
-    </StartCardStyle>
+          {/* <p style={{ color: "#black" }}>{t("StartCardMessage4")}</p> */}
+        </LeftAlignedText>
+        <RightAlignedText>
+          {/* <p style={{ color: "#black" }}>{t("StartCardMessage5")}</p> */}
+        </RightAlignedText>
+      </StartCardStyle>
     </>
   );
 };
@@ -91,7 +97,7 @@ export const StartCard = () => {
 export const EndCard_Top = () => {
   const { t } = useTranslation();
   const handleClick = () => {
-    window.scrollTo({ top: 0, behavior: 'auto' });
+    window.scrollTo({ top: 0, behavior: "auto" });
     window.location.reload();
   };
   return (
@@ -105,7 +111,9 @@ export const EndCard_Top = () => {
       <RightAlignedText>
         <p style={{ color: "#black" }}>{t("EndCardMessage4")}</p>
       </RightAlignedText>
-      <Button onClick={handleClick} variant = "outlined">{t("backToTop")}</Button>
+      <Button onClick={handleClick} variant="outlined">
+        {t("backToTop")}
+      </Button>
     </StartCardStyle>
   );
 };
@@ -115,14 +123,12 @@ export const EndCard_Bottom = () => {
   const [mes, setMes] = useState(t("backToTop"));
   const handleHover = () => {
     setMes(t("seeYouMessage"));
-  }
+  };
   const handleClick = () => {
-    if(mes === t("seeYouMessage")){
-
-    window.scrollTo({ top: 0, behavior: 'auto' });
-    window.location.reload();
-    }
-    else{
+    if (mes === t("seeYouMessage")) {
+      window.scrollTo({ top: 0, behavior: "auto" });
+      window.location.reload();
+    } else {
       setMes(t("seeYouMessage"));
     }
   };
@@ -137,7 +143,13 @@ export const EndCard_Bottom = () => {
       <RightAlignedText>
         <p style={{ color: "#black" }}>{t("EndCardMessage4")}</p>
       </RightAlignedText>
-      <Button onClick={handleClick} onMouseEnter={handleHover} variant = "outlined">{mes}</Button>
+      <Button
+        onClick={handleClick}
+        onMouseEnter={handleHover}
+        variant="outlined"
+      >
+        {mes}
+      </Button>
     </StartCardStyle>
   );
 };
