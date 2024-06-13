@@ -1,4 +1,5 @@
 
+// import { TrickSwitcher } from "./DebugTool";
 import { GameLoop } from "./component/GameLoop";
 
 
