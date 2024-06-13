@@ -161,6 +161,9 @@ i18n.use(initReactI18next).init({
         lastHachitanMessage14: "can you just keep going as if nothing happened?",
 
         Hachitan: "Hachitan",
+
+        Tweet1: "Connecting Communities, Delivering Hearts.-Yahata Railway-",
+        Tweet2: "Huh, isn't this the Twitter icon!? -Yahata Railway-",
       },
     },
     ja: {
@@ -312,6 +315,10 @@ i18n.use(initReactI18next).init({
         lastHachitanMessage13:"お願いだよ。",
         lastHachitanMessage14:"このまま、何もなかったように、下に進んでくれる？",
         Hachitan: "ハチタン",
+
+        Tweet1:"地域とつながる、心を運ぶ。-八幡鉄道-",
+        Tweet2:"えっ、Twitterってこのアイコンじゃないの！？-八幡鉄道-",
+
       },
     },
   },

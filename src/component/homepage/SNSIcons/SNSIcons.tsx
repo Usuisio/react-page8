@@ -5,6 +5,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import styled, { css } from "styled-components";
 import { useSelector } from "react-redux";
 import { RootState } from "../../../store";
+import {useTranslation} from "react-i18next";
 
 const FooterlIconsStyle = styled.div`
   display: flex;
@@ -25,37 +26,39 @@ const StyledTwitterIcon = styled(TwitterIcon)`${iconStyles}`;
 const StyledFacebookIcon = styled(FacebookIcon)`${iconStyles}`;
 const StyledInstagramIcon = styled(InstagramIcon)`${iconStyles}`;
 
-const shareOnX = () => {
-    const text = "地域とつながる、心を運ぶ。-八幡鉄道-";
-    const url = 'https://usuisio.github.io/react-page8/'; 
+
+
+export const SNSIcons = () => {
+  const currentTrick = useSelector((state: RootState) => state.gameState.currentTrick);
+  const {t} = useTranslation();
+
+  const shareOnX = () => {
+    const text = t("Tweet1");
+    const url = 'https://usuisio.github.io/yahata-railway/'; 
     const shareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`;
     window.open(shareUrl, '_blank');
   };
 
   const shareOnTwitter = () => {
-    const text = "えっ、Twitterってこのアイコンじゃないの！？-八幡鉄道-";
-    const url = 'https://usuisio.github.io/react-page8/'; 
+    const text = t("Tweet2");
+    const url = 'https://usuisio.github.io/yahata-railway/'; 
     const shareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`;
     window.open(shareUrl, '_blank');
   };
   const shareOnFacebook = () => {
-    const url = 'https://usuisio.github.io/react-page8/'; // シェアしたいURL
+    const url = 'https://usuisio.github.io/yahata-railway/'; // シェアしたいURL
     const shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
     window.open(shareUrl, '_blank');
   };
   
   const shareOnInstagram = () => {
-    const url = 'https://usuisio.github.io/react-page8/'; // シェアしたいURL
+    const url = 'https://usuisio.github.io/yahata-railway/'; // シェアしたいURL
     const shareUrl = `https://www.instagram.com/?url=${encodeURIComponent(url)}`;
     window.open(shareUrl, '_blank');
   };
-
-export const SNSIcons = () => {
-  const currentTrick = useSelector((state: RootState) => state.gameState.currentTrick);
   return (
     <FooterlIconsStyle>
       {currentTrick == "Twitterのロゴ" ? <StyledTwitterIcon  onClick={shareOnTwitter}/>: <StyledXIcon onClick={shareOnX}/>}
-      
       
       <StyledFacebookIcon  onClick={shareOnFacebook}/>
       <StyledInstagramIcon  onClick={shareOnInstagram}/>
